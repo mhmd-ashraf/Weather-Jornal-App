@@ -1,0 +1,133 @@
+body{
+    background: #fffff8;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+#app{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(234, 235, 248);
+    color: #3b4a6b;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    height: 100vh;
+    justify-content: space-around;
+}
+
+.holder{
+
+}
+
+.entry{
+    margin: 10px;
+    background: rgba(25, 87, 243, 0.4);
+    width: 55%;
+    border-radius: 10px;
+    min-height: 50px;
+    padding: 10px;
+}
+
+#entryHolder{
+
+}
+
+#date{
+
+}
+
+#temp{
+
+}
+
+#content{
+
+}
+
+.headline {
+    font-size: 40px;
+    font-weight: bold;
+}
+.title{
+
+}
+
+.holder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label{
+    display:block;
+    font-size: 27px;
+}
+
+input{
+    border-radius: 10px;
+    display:block;
+    height: 60px;
+    width: 400px;
+    background:#f8fafa;
+    color: #10100f;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: 1px solid black;
+}
+
+button{
+    width: 400px;
+    height: 70px;
+    border-radius: 10px;
+    background: #3b4a6b;
+    color: #f8f8f8;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+}
+h1{
+    font-size: 36px;
+}
+
+textarea{
+    width: 400px;
+    border-radius: 10px;
+    background:#f8fafa;
+    color: #101010;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: 1px solid black;
+    margin: 10px 0;
+    height: 100px;
+}
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: #10100f; 
+    font-family: 'Oswald', sans-serif;
+    opacity: 50%;
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: #10100f; 
+    font-family: 'Oswald', sans-serif;
+    opacity: 50%;
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: #10100f; 
+    font-family: 'Oswald', sans-serif;
+    opacity: 50%;
+} 

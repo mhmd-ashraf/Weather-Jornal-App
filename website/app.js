@@ -18,17 +18,15 @@ const generateApp = () => {
     const feelings = document.getElementById('feelings').value;
 
     getData(zipCode).then((data) => {
-        if (data) {
+        if (data!=0) {
             const {
                 main: { temp },
                 name: city,
-                weather: [{ descprition }],
             } = data;
             const info = {
                 newDate,
                 city,
                 temp: Math.round(temp),
-                // descprition,
                 feelings,
             };
             postData(server + "/add", info);
@@ -81,15 +79,20 @@ const postData = async (url = "", pData = {}) => {
 };
 
 
+const dateSec = document.getElementById("date");
+const citySec = document.getElementById("city");
+const tempSec = document.getElementById("temp");
+const contSec = document.getElementById("content");
+
 const retriveData = async () => {
     const res = await fetch(server + "/all");
     try {
         const sData = await res.json();
         // console.log(`your : ${sData.city} , ${sData.temp}`);
-        document.getElementById("date").innerHTML = sData.newDate;
-        document.getElementById("city").innerHTML = sData.city;
-        document.getElementById("temp").innerHTML = sData.temp + '&degC';
-        document.getElementById("content").innerHTML = sData.feelings;
+        dateSec.innerHTML = sData.newDate;
+        citySec.innerHTML = sData.city;
+        tempSec.innerHTML = sData.temp + '&degC';
+        contSec.innerHTML = sData.feelings;
 
     }
     catch (error) {
